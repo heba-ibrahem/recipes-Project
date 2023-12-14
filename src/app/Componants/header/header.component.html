@@ -1,0 +1,33 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white" >
+    <a class="navbar-brand" href="#">
+        <img src="/assets/recipeslogo.webp" width="60px" alt="">
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+      <ul class="navbar-nav  my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+        <li class="nav-item ">
+            <a  class="nav-link"[routerLink]="['/home']" routerLinkActive="active" >Recipes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/favorite']" routerLinkActive="active" >Favorites</a>
+        </li>
+      </ul>
+
+      <form class="d-flex mr-19" *ngIf="path ==='/home' ||path === '/favorite'">
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text" ><i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+          </div>     
+          <input class="form-control mr-2 in-search" type="search" placeholder="Search..." aria-label="Search" [(ngModel)]="searchTerm" name="listFilter" (keydown.enter)="filter(searchTerm)">
+        </div>
+         <button class="btn btn-dark btn-position" type="button" (click)="filter(searchTerm)">Search</button>
+      </form>
+      
+    </div>
+  </nav>

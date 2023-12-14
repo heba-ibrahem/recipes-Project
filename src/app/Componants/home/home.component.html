@@ -1,0 +1,19 @@
+<div class="container mb-5 mt-4" >
+    <div class="row mb-4"  *ngIf="(recipesList |search: searchTerm )as result">
+        <div *ngFor="let recipe of result | paginate : {
+            itemsPerPage: pageSize,
+            currentPage: page,
+            totalItems: count
+          };" >
+        <app-recipe-card [recipe]="recipe"  ></app-recipe-card>
+        </div>
+        <div *ngIf="result.length=== 0" class="mt-5" style="width: 100%;">
+            <div class="alert alert-danger" role="alert">
+                No recipes match your search !!
+              </div>
+        </div> 
+    </div>
+    
+    <pagination-controls  class="my-pagination text-center " (pageChange)="page = $event"></pagination-controls>
+</div>
+

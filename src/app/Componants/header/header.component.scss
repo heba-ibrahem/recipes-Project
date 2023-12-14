@@ -1,0 +1,36 @@
+*:not(.fa-search){
+    font-family: 'Playball', cursive;
+}
+a{
+    font-size: 1.3rem;
+}
+button,input{
+    border-radius: 1.3rem;
+}
+nav{
+    border-bottom:4px solid #eaeaea ;
+}
+.active {
+    color: #ef7c20 !important ;
+    border-bottom: 1px solid #ef7c20;
+}
+.input-group-text{
+    border-radius: 1.2rem 0 0 1.2rem;
+    background: white;
+}
+.navbar-brand{
+    margin: 0 5rem;
+}
+.mr-19{
+    margin-left: 19rem;
+}
+.btn-position{
+    position: absolute;
+    right: 25px;
+}
+.input-group-text{
+    border-right-color:#fff ;
+}
+.in-search{
+    border-left-color:#fff ;
+}

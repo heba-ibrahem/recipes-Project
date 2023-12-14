@@ -1,0 +1,24 @@
+
+<div class="card" style="width: 22rem;" >
+    <img src="{{recipe.image}}" class="card-img-top" alt="...">
+    <button class=" favBtn" >
+        <i *ngIf="!isFavorit" class="fa fa-heart-o" aria-hidden="true" (click)="addToFavorites(recipe)"></i>
+        <i  *ngIf="isFavorit" class="fa fa-heart" aria-hidden="true" (click)="removefromFavorites(recipe)"></i> 
+    </button>
+    <!-- <button class=" favBtn" *ngIf="!recipe.isFavorit">
+        <i *ngIf="!isFavorit" class="fa fa-heart-o" aria-hidden="true" (click)="addToFavorites(recipe)"></i>
+        <i  *ngIf="isFavorit" class="fa fa-heart" aria-hidden="true" (click)="removefromFavorites(recipe.id)"></i> 
+    </button> -->
+    <div class="card-body" [routerLink]="['/recipeDetails',recipe.id,'information']">
+        <h5 class="card-title">{{recipe.title}}</h5>
+        <p class="card-text max-lines"  [innerHTML]="recipe.summary"></p>
+
+        <hr>
+        <div class="row">
+            <p class="cardMetaData"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                {{recipe.readyInMinutes}} mins</p>
+            <button class="cardMetaData likeBtn"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                {{recipe.aggregateLikes}}</button>
+        </div>
+    </div>
+  </div>

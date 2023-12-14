@@ -1,0 +1,60 @@
+h5,p {
+  font-family: "Comic Neue", cursive;
+}
+p {
+  color: #595c5f;
+}
+h5 {
+  color: #ef7c20;
+  font-weight: 700;
+  height: 2.5em;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+img {
+    border-radius: 1rem 1rem 0 0;
+  }
+.favBtn {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 20px;
+  right: 23px;
+  box-shadow: 0px 2px 4px gray;
+  font-size: 1.5rem;
+}
+.fa-heart {
+    color: #ef7c20;
+  }
+  .fa-heart-o {
+    color: #595c5f;
+  }
+.card {
+  border: 1px solid #ef7c20;
+  border-radius: 1rem;
+  margin: 10px;
+}
+.card-body {
+    cursor: pointer;
+  }  
+.cardMetaData {
+  color: #ef7c20;
+  margin: 0 10px;
+}
+.likeBtn {
+  border: none;
+  background-color: transparent;
+}
+.max-lines {
+  display: block; 
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 6.3em;
+  line-height: 1.6em;
+}
+
